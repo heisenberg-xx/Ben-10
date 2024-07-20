@@ -1,17 +1,19 @@
-import React from 'react'
-import { Header } from './components/Header'
-import { Outlet } from 'react-router'
+import React from "react";
+import { Header } from "./components/Header";
+import { Outlet } from "react-router";
 
 const App = () => {
   return (
     <>
-      <Header/>
-      <main >
-        <Outlet/>
+      <Header />
+      <main>
+        <Outlet />
       </main>
-      <footer className=" font-para opacity-60 text-[13px] text-green-600 absolute left-[45%] bottom-3"> A tribute to Ben 10 by Rajesh Ande</footer>
+      <p className="font-para opacity-60 text-[12px] text-green-600 absolute right-5 bottom-[40%] transform rotate-90 origin-bottom-right">
+        A tribute to Ben 10 by Rajesh Ande
+      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
