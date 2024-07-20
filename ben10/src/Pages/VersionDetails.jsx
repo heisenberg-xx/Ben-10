@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router";
 import { useGetAliensByversionIdQuery } from "../redux/apis/alienApiSlice";
 import { useDispatch } from "react-redux";
 import Typewriter from "react-typewriter-effect";
-import "../components/scrollbar.css";
+import "../components/scrollbar.css"
 import Loader from "../components/Loader";
 
 const VersionDetails = () => {
@@ -23,8 +23,16 @@ const VersionDetails = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (version) {
+      dispatch(setVersion(version));
+    }
+   
+    
+  }, [version, dispatch]);
+
   if (versionLoading || aliensLoading) {
-    return <Loader />;
+    return <Loader/>;
   }
 
   if (versionError || aliensError) {
