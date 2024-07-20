@@ -22,3 +22,4 @@ app.use('/api/ben10/aliens', AlienRoutes)
 app.listen(port, () => {
     console.log(`successfully running on ${port}`)
 })
+export default app
