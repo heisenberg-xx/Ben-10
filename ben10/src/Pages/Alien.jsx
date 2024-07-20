@@ -7,7 +7,6 @@ import Loader from "../components/Loader";
 
 const Alien = () => {
   const version = useSelector((state) => state.version);
-  console.log(version);
   const { name: encodedName } = useParams();
   const alienname = decodeURIComponent(encodedName);
   const {
@@ -16,14 +15,7 @@ const Alien = () => {
     error,
   } = useGetAlienQuery({ alienname, versionid: version?._id || "" });
 
-  useEffect(() => {
-    if (alien) {
-      console.log(alien);
-    }
-    if (version) {
-      console.log(version);
-    }
-  }, [alien, version]);
+  
 
   if (isLoading) return <Loader />;
   if (error) return <p>Error: {error.message}</p>;
