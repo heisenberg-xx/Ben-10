@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "BD_Geminis";
+  src: url("./assets/BD_Geminis.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BD_Geminis_Bold";
+  src: url("./assets/BD_Geminis.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Game_Over";
+  src: url("./assets/game_over.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Game_Over_Bold";
+  src: url("./assets/game_over.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NudgeBold";
+  src: url("./assets/P22NudgewinkPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NudgeLight";
+  src: url("./assets/P22NudgewinkPro-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NudgeRegular";
+  src: url("./assets/P22NudgewinkPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
