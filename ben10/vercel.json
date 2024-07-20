@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/api/ben10/:path*",
-        "destination": "https://ben-10-server.vercel.app/:path*"
+        "source": "/api/ben10/(.*)",
+        "destination": "https://ben-10-server.vercel.app/api/ben10/$1"
       }
     ]
   }
