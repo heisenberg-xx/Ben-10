@@ -3,14 +3,13 @@ import { useGetAllVersionsQuery } from "../redux/apis/versionSlice";
 import { useNavigate } from "react-router";
 import "animate.css";
 import Loader from "../components/Loader";
-import 'animate.css'
+import "animate.css";
 
 const Home = () => {
   const navigate = useNavigate();
-  const { data: versions ,isLoading} = useGetAllVersionsQuery();
+  const { data: versions, isLoading } = useGetAllVersionsQuery();
 
- 
-  if (isLoading) return <Loader/>;
+  if (isLoading) return <Loader />;
 
   return (
     <>
@@ -27,12 +26,11 @@ const Home = () => {
                 src={version.logo}
                 alt={version.name}
               />
-              <h3 className="text-[20px] text-center font-customNudge text-green-600 mt-3">{version.name}</h3>
-
-              
+              <h3 className="text-[20px] text-center font-customNudge text-green-600 mt-3">
+                {version.name}
+              </h3>
             </div>
           ))}
-          
         </section>
       ) : (
         <p>No versions found.</p>

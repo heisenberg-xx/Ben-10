@@ -6,9 +6,10 @@ const App = () => {
   return (
     <>
       <Header/>
-      <main>
+      <main >
         <Outlet/>
       </main>
+      <footer className=" font-para opacity-60 text-[13px] text-green-600 absolute left-[45%] bottom-3"> A tribute to Ben 10 by Rajesh Ande</footer>
     </>
   )
 }
