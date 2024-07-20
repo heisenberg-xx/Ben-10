@@ -1,15 +1,14 @@
 .loader-container {
-  height: 90vh;
-  width: 90vw;
+  height:100vh;
+  width: 100vw;
   position: relative;
-  background-color: black;
+  
 }
 
 
 .loader {
   transform: translateZ(1px);
-  top: 25%;
-  left: 40%;
+ 
   transform: translate(-50%, -50%);
   position: absolute;
   animation: coin-flip 4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
