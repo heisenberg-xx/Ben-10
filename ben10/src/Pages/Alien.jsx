@@ -16,15 +16,6 @@ const Alien = () => {
     error,
   } = useGetAlienQuery({ alienname, versionid: version?._id || "" });
 
-  useEffect(() => {
-    if (alien) {
-      console.log(alien);
-    }
-    if (version) {
-      console.log(version);
-    }
-  }, [alien, version]);
-
   if (isLoading) return <Loader />;
   if (error) return <p>Error: {error.message}</p>;
 
