@@ -19,7 +19,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/api/ben10/versions', VersionRoutes)
 app.use('/api/ben10/aliens', AlienRoutes)
 
-app.listen(port, () => {
-    console.log(`successfully running on ${port}`)
-})
-export default app
+export default function handler(req, res) {
+    app(req, res);
+  }
