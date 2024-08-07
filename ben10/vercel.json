@@ -1,9 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/api/ben10/(.*)",
-        "destination": "https://ben-10-server.vercel.app/api/ben10/$1"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/api/ben10/(.*)",
+      "destination": "https://ben-10-server.vercel.app/api/ben10/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
