@@ -24,7 +24,7 @@ const Alien = () => {
     <>
       {alien ? (
         <section className="flex md:flex-row items-center flex-col h-[80vh] md:mt-0 mt-10">
-          <div className="md:w-[30%] w-full flex flex-col justify-around items-center rounded-2xl gap-[20px]">
+          <div className="md:w-[30%] h-[50vh] w-full flex flex-col justify-around items-center rounded-2xl gap-[20px]">
             <img
               className="animate__animated animate__bounceIn md:object-contain  md:h-[400px] md:w-full w-[200px] h-[full] transition-transform transform hover:scale-105 drop-shadow-[0_7px_15px_rgb(5,245,75,0.5)]"
               src={alien.image}
