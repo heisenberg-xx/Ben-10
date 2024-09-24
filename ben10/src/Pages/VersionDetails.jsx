@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router";
 import { useGetAliensByversionIdQuery } from "../redux/apis/alienApiSlice";
 import { useDispatch } from "react-redux";
 import Typewriter from "react-typewriter-effect";
-import "../components/scrollbar.css"
 import Loader from "../components/Loader";
 
 const VersionDetails = () => {
@@ -67,7 +66,7 @@ const VersionDetails = () => {
                 Aliens
               </h2>
               {aliens ? (
-                <ul className="flex md:py-3 md:px-4 px-2 py-2 md:rounded-r-[50px] md:rounded-l-[50px] rounded-r-[35px] rounded-l-[35px] border-[3px] border-green-600 overflow-x-auto md:w-[96%] w-[100%] scrollbar-hide">
+                <ul className="flex md:py-3 md:px-4 px-2 py-2 md:rounded-r-[50px] md:rounded-l-[50px] rounded-r-[35px] rounded-l-[35px] border-[3px] border-green-600 overflow-x-auto md:w-[96%] w-[100%] ">
                   {aliens.map((alien) => (
                     <li
                       className="animate__animated animate__bounceIn text-center mx-1 min-w-[90px]"
