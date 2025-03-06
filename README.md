@@ -15,7 +15,7 @@ The **Ben 10 Wiki** is a fan-made project that provides detailed information abo
 ## Tech Stack 🛠️
 
 - **Frontend:** **React** ⚛️, **Tailwind CSS** 🎨, **Redux** 🔄
-- **Backend:** **Custom API (self-hosted)** ⚙️
+- **Backend:** **Custom API (self-hosted)** using **Express** and **MongoD8**  ⚙️
 - **Deployment:** **Vercel** 🚀
 
 ## Installation & Setup 🏗️
