@@ -2,6 +2,7 @@ import { useGetAlienQuery } from "../redux/apis/alienApiSlice";
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
 import Typewriter from "react-typewriter-effect";
+import { skipToken } from "@reduxjs/toolkit/query";
 import Loader from "../components/Loader";
 
 const Alien = () => {
@@ -27,7 +28,8 @@ const Alien = () => {
             <img
               className="animate__animated animate__bounceIn md:object-contain  md:h-[400px] md:w-full w-[200px] h-[full] transition-transform transform hover:scale-105 drop-shadow-[0_7px_15px_rgb(5,245,75,0.5)]"
               src={alien.image}
-              alt="Omnitrix Logo"
+              alt={alien.name}
+              loading="lazy"
             />
             <h1 className="mb-5 md:text-[35px] text-[25px] text-center font-customNudge text-green-600 ">
               {alien.name}

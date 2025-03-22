@@ -47,6 +47,7 @@ const VersionDetails = () => {
               className="animate__animated animate__bounceIn md:object-contain object-fill md:h-[400px] md:w-[400px] w-[300px] h-[full] transition-transform transform hover:scale-105 drop-shadow-[0_7px_15px_rgb(5,245,75,0.5)]"
               src={version.omnitrixLogo}
               alt="Omnitrix Logo"
+              loading="lazy"
             />
             <h1 className="mb-5 md:text-[35px] text-[25px] text-center font-customNudge text-green-600">
               {version.omnitrixName}
@@ -80,6 +81,7 @@ const VersionDetails = () => {
                           className="object-cover md:h-[80px] md:w-[80px] w-[60px] h-[60px] md:rounded-[35px] rounded-[25px] transition-transform transform hover:scale-110"
                           src={alien.cover}
                           alt={alien.name}
+                          loading="lazy"
                         />
                         <p className="mt-1 font-customNudgeLight md:text-[15px] text-[13px]">
                           {alien.name}

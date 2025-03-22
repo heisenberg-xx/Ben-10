@@ -32,6 +32,7 @@ const Home = () => {
                 className="object-cover h-[130px] md:h-[220px] transition-transform transform hover:scale-110  "
                 src={version.logo}
                 alt={version.name}
+                loading="lazy"
               />
               <h3 className="text-[20px] text-center font-customNudge text-green-600 mt-3">
                 {version.name}

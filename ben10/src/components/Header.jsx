@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <nav className="flex justify-center items-center p-5 shadow-md">
       <div onClick={() => navigate("/")} className="h-[10vh] ">
-        <img className=" object-contain h-[100px]" src={logoUrl} alt="Logo" />
+        <img className=" object-contain h-[100px]" src={logoUrl} alt="Logo" loading="eager"/>
       </div>
     </nav>
   );
