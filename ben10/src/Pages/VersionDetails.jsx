@@ -7,7 +7,9 @@ import Typewriter from "react-typewriter-effect";
 import Loader from "../components/Loader";
 
 const VersionDetails = () => {
-  const { name } = useParams();
+  const { name: encodedName } = useParams();
+  const name = decodeURIComponent(encodedName);
+
   const {
     data: version,
     error: versionError,
@@ -26,12 +28,10 @@ const VersionDetails = () => {
     if (version) {
       dispatch(setVersion(version));
     }
-   
-    
   }, [version, dispatch]);
 
   if (versionLoading || aliensLoading) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   if (versionError || aliensError) {
@@ -65,7 +65,7 @@ const VersionDetails = () => {
               <h2 className="text-[25px] m-4 font-customNudgeRegular drop-shadow-[0_9px_15px_rgb(5,245,75,0.9)]">
                 Aliens
               </h2>
-              {aliens ? (
+              {aliens && aliens.length > 0 ? (
                 <ul className="flex md:py-3 md:px-4 px-2 py-2 md:rounded-r-[50px] md:rounded-l-[50px] rounded-r-[35px] rounded-l-[35px] border-[3px] border-green-600 overflow-x-auto md:w-[96%] w-[100%] ">
                   {aliens.map((alien) => (
                     <li

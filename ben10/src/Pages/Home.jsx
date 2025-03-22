@@ -1,13 +1,20 @@
-import React from "react";
-import { useGetAllVersionsQuery } from "../redux/apis/versionSlice";
+import React, { useEffect } from "react";
+import {
+  clearVersion,
+  useGetAllVersionsQuery,
+} from "../redux/apis/versionSlice";
 import { useNavigate } from "react-router";
-import "animate.css";
 import Loader from "../components/Loader";
 import "animate.css";
+import { useDispatch } from "react-redux";
 
 const Home = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { data: versions, isLoading } = useGetAllVersionsQuery();
+  useEffect(() => {
+    dispatch(clearVersion());
+  });
 
   if (isLoading) return <Loader />;
 
@@ -31,7 +38,6 @@ const Home = () => {
               </h3>
             </div>
           ))}
-         
         </section>
       ) : (
         <p>No versions found.</p>

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useGetAlienQuery } from "../redux/apis/alienApiSlice";
 import { useParams } from "react-router";
 import { useSelector } from "react-redux";
@@ -13,12 +12,12 @@ const Alien = () => {
     data: alien,
     isLoading,
     error,
-  } = useGetAlienQuery({ alienname, versionid: version?._id || "" });
-
-  
+  } = useGetAlienQuery(
+    version?._id ? { alienname, versionid: version._id } : skipToken
+  );
 
   if (isLoading) return <Loader />;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p className="text-green">Error: {error.message}</p>;
 
   return (
     <>
@@ -48,7 +47,7 @@ const Alien = () => {
                 Powers :
               </h2>
               <ul className="flex flex-col justify-around items-center ">
-                {alien.powers.split(",").map((power, index) => (
+                {alien?.powers?.split(",").map((power, index) => (
                   <li
                     className="m-3 font-para text-[15px] text-left"
                     key={index}
