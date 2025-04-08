@@ -25,7 +25,7 @@ const Home = () => {
           {versions.map((version) => (
             <div
               key={version.name}
-              className="animate__animated animate__bounceInLeft flex flex-col justify-evenly items-center rounded-3xl m-2 md:w-[15%] w-[60%]  md:h-[75%]   md:p-1 p-3 border-2 border-green-600  hover:shadow-[10px_10px_70px_rgba(5,_245,_75,_0.3)] transition-transform transform hover:scale-105 gap-2 "
+              className="animate__animated animate__bounceInLeft flex flex-col justify-evenly items-center rounded-3xl m-2 md:w-[15%] w-[60%]  md:h-[75%]   md:p-1 p-3 border-2 border-green-600  hover:shadow-[10px_10px_70px_rgba(5,_245,_75,_0.3)] transition-transform transform hover:scale-105 gap-2 bg-black "
               onClick={() => navigate(`version/${version.name}`)}
             >
               <img
