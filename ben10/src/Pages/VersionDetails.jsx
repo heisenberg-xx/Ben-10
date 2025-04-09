@@ -67,7 +67,7 @@ const VersionDetails = () => {
                 Aliens
               </h2>
               {aliens && aliens.length > 0 ? (
-                <ul className="flex md:py-3 md:px-4 px-2 py-2 md:rounded-r-[50px] md:rounded-l-[50px] rounded-r-[35px] rounded-l-[35px] border-[3px] border-green-600 overflow-x-auto md:w-[96%] w-[100%] ">
+                <ul className="flex md:py-3 md:px-4 px-3 py-1 md:rounded-r-[50px] md:rounded-l-[50px] rounded-r-[35px] rounded-l-[35px] border-[3px] border-green-600 overflow-x-auto md:w-[96%]  max-w-[120%] bg-black ">
                   {aliens.map((alien) => (
                     <li
                       className="animate__animated animate__bounceIn text-center mx-1 min-w-[90px]"
@@ -78,12 +78,12 @@ const VersionDetails = () => {
                     >
                       <div className="flex flex-col items-center">
                         <img
-                          className="object-cover md:h-[80px] md:w-[80px] w-[60px] h-[60px] md:rounded-[35px] rounded-[25px] transition-transform transform hover:scale-110"
+                          className="object-cover md:h-[80px] md:w-[80px] w-[55px] h-[55px] md:rounded-[35px] rounded-[25px] transition-transform transform hover:scale-110"
                           src={alien.cover}
                           alt={alien.name}
                           loading="lazy"
                         />
-                        <p className="mt-1 font-customNudgeLight md:text-[15px] text-[13px]">
+                        <p className="mt-1 font-customNudgeLight md:text-[15px] text-[12px]">
                           {alien.name}
                         </p>
                       </div>

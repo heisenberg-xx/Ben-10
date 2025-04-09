@@ -44,7 +44,7 @@ const Alien = () => {
                 <Typewriter text={alien.description} typeSpeed={15} />
               </div>
             </div>
-            <div className="md:h-[50%] flex flex-col items-center   text-green-600  md:px-10 md:py-8 px-5 py-3 border-2 border-green-600 rounded-xl">
+            <div className="md:h-[50%] flex flex-col items-center bg-black  text-green-600  md:px-10 md:py-8 px-5 py-3 border-2 border-green-600 rounded-xl">
               <h2 className="text-[20px]  mb-4 font-customNudgeRegular drop-shadow-[0_9px_15px_rgb(5,245,75,0.9)]">
                 Powers :
               </h2>
