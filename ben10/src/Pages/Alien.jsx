@@ -40,7 +40,7 @@ const Alien = () => {
               <h1 className="text-green-600 font-customNudgeRegular text-[20px] mt-5 drop-shadow-[0_9px_15px_rgb(5,245,75,0.9)]">
                 Wiki :
               </h1>
-              <div className="  text-green-600 mt-[35px] font-para p-3 md:text-[15px] text-[13px]">
+              <div className=" text-green-600 mt-[35px] font-para p-3 md:text-[15px] text-[13px]">
                 <Typewriter text={alien.description} typeSpeed={15} />
               </div>
             </div>
