@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("Welcome to ben_10_Api");
 }
+);
 app.use("/api/ben10/versions", VersionRoutes);
 app.use("/api/ben10/aliens", AlienRoutes);
 app.use("/api/ben10/chatbot", ChatBotRoutes);
