@@ -33,7 +33,6 @@ const ChatBot = () => {
   const handleAsk = async () => {
     if (!query.trim()) return;
 
-    // Add user message
     const userMessage = {
       type: "user",
       text: query,
@@ -48,10 +47,8 @@ const ChatBot = () => {
     try {
       const result = await postChatBot({ message: currentQuery }).unwrap();
 
-      // Set the current bot message for typewriter effect
       setCurrentBotMessage(result.reply);
 
-      // Add bot message to history after a brief delay
       setTimeout(() => {
         const botMessage = {
           type: "bot",
@@ -91,9 +88,9 @@ const ChatBot = () => {
       {!isBotOpen && (
         <div
           onClick={toggleBot}
-          className="fixed bottom-3 md:left-5 left-2 text-white p-3 cursor-pointer z-50 flex flex-col items-center hover:scale-105 transition-transform"
+          className="fixed bottom-3 md:left-5 left-2 text-white p-3 cursor-pointer z-50 flex flex-col items-center transform hover:scale-105 transition-transform "
         >
-          <div className="h-14 w-14 border-2 border-green-600 rounded-full overflow-hidden bg-black">
+          <div className="h-14 w-14 border-2 border-green-600 rounded-full overflow-hidden bg-black hover:shadow-[10px_10px_70px_rgba(5,_245,_75,_0.3)]">
             <img
               className="w-full h-full object-cover"
               src={azimuthLogo}
