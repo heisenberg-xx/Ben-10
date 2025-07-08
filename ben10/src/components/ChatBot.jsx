@@ -85,7 +85,7 @@ const ChatBot = () => {
     setShowTypewriter(true);
   };
 
-  const mouseRef = useRef({ x: 0.2, y: 0.2 });
+  const mouseRef = useRef({ x: 0.7, y: 0.7 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
