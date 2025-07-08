@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { usePostChatBotMutation } from "../redux/apis/chatBotSlice";
 import azimuthLogo from "../assets/AzimuthLogo.jpg";
 import Typewriter from "react-typewriter-effect";
+import { Canvas } from "@react-three/fiber";
+import Azmuth3dModel from "./Azmuth3dModel";
 
 const ChatBot = () => {
   const [query, setQuery] = useState("");
@@ -83,6 +85,19 @@ const ChatBot = () => {
     setShowTypewriter(true);
   };
 
+  const mouseRef = useRef({ x: 0.2, y: 0.2 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      mouseRef.current = {
+        x: e.clientX / window.innerWidth,
+        y: e.clientY / window.innerHeight,
+      };
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <>
       {!isBotOpen && (
@@ -90,12 +105,14 @@ const ChatBot = () => {
           onClick={toggleBot}
           className="fixed bottom-3 md:left-5 left-2 text-white p-3 cursor-pointer z-50 flex flex-col items-center transform hover:scale-105 transition-transform "
         >
-          <div className="h-14 w-14 border-2 border-green-600 rounded-full overflow-hidden bg-black hover:shadow-[10px_10px_70px_rgba(5,_245,_75,_0.3)]">
-            <img
-              className="w-full h-full object-cover"
-              src={azimuthLogo}
-              alt="Azmuth Logo"
-            />
+          <div className="rounded-full h-30 w-20  hover:drop-shadow-[10px_10px_70px_rgba(5,_245,_75,_0.3)]">
+            <Canvas camera={{ position: [0, 0, 2] }}>
+              <ambientLight intensity={1} />
+              <directionalLight position={[0, 2, 2]} />
+              <Suspense fallback={null}>
+                <Azmuth3dModel mouse={mouseRef} />
+              </Suspense>
+            </Canvas>
           </div>
           <p className="text-center md:block hidden font-customNudgeRegular text-green-600 mt-1 text-sm">
             Azmuth Here!
