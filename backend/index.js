@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome to ben_10_Api");
+  res.send("Welcome to ben_10_Api Broooooooooo");
 }
 );
 app.use("/api/ben10/versions", VersionRoutes);
