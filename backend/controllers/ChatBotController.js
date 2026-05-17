@@ -17,7 +17,7 @@ export const chatWithBot = asyncHandler(async (req, res) => {
 
   try {
     const response = await genAI.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
       contents: `You are an expert on Ben 10. Only answer questions related to Ben 10. If the question is not about Ben 10, politely redirect the user to ask about Ben 10 topics. User asked: ${message}`,
     });
 
